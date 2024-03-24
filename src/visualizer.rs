@@ -42,7 +42,7 @@ impl Visualizer {
             let key = i as f32 * 88.0 / self.pixels.len() as f32;
             let key = key as usize;
             let color = if self.keys[key] > 0.0 {
-                let hue = 360.0 / (i % 12) as f32;
+                let hue = 360.0 / (key % 12) as f32;
                 let (r, g, b) = hsv_to_rgb(hue, 1.0, 1.0);
                 let r = (r * 255.0) as u8;
                 let g = (g * 255.0) as u8;
